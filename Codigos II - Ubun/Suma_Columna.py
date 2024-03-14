@@ -1,32 +1,32 @@
-def CrearColumna(f,c):
-    m = []
-    for i in range(f):
+def Crear_columna(x, y):
+    col = []
+    for i in range(x):
         l = []
-        for j in range(c):
+        for j in range(y):
             num = int(input())
             l.append(num)
-        m.append(l)
-    return m
+        col.append(l)
+    return col
 
-def ListaSumar(m,f,c):
-    listasumas = []
+def Sumar_lista(col,x,y):
+    lista2 = []
     lista = []
     sum = 0
-    for i in range(c):
-        for j in range(f):
-            sum += m[j][i]
+    for i in range(y):
+        for j in range(x):
+            sum += col[j][i]
             lista = sum
-        listasumas.append(lista)
+        lista2.append(lista)
         sum = 0
-    return listasumas
+    return lista2
 
-def ImprimirLista(listasumas):
-    print(",".join(map(str, listasumas))) 
+def ImprimirLista(lista2):
+    print(",".join(map(str, lista2))) 
 
-f = int(input())
-c = int(input())
-m = CrearColumna(f,c)
-lista = ListaSumar(m,f,c)
+x = int(input())
+y = int(input())
+col = Crear_columna(x, y)
+lista = Sumar_lista(col, x, y)
 ImprimirLista(lista)
 
 
