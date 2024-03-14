@@ -1,24 +1,24 @@
-def CreateMatrix(r, c):
-    m = []
-    for i in range(r):
+def Crear_matriz(x, y):
+    matriz = []
+    for i in range(x):
         l = []
-        for j in range(c):
+        for j in range(y):
             v = int(input())
             l.append(v)
-        m.append(l)
+        matriz.append(l)
     return m
 
-def SumMatrix(m,r,c):
+def Sumar_matriz(matriz,x,y):
     sum = 0
-    for i in range(r):
-        for j in range(c):
+    for i in range(x):
+        for j in range(y):
             if i == j:
-                sum += m[i][j]
+                sum += matriz[i][j]
     return sum
 
 
-r = int(input())
-c = int(input())
-m = CreateMatrix(r,c)
-print(SumMatrix(m,r,c))
+x = int(input())
+y = int(input())
+matriz = Crear_matriz(x,y)
+print(Sumar_matriz(matriz,x,y))
 
